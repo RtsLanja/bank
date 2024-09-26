@@ -46,7 +46,7 @@ function ClientList() {
   }
   const deleteUser = (id) => {
     try {
-        axios.delete('https://localhost/react/api/'+id+'/delete').then(function(response){
+        axios.delete('http://localhost/react/api/'+id+'/delete').then(function(response){
         console.log(response.data);
         getClients();
       })
