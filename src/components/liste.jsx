@@ -12,7 +12,7 @@ function ClientList() {
   }, []);
   async function getClients () {  
     try {
-      const response = await axios.get('https://localhost/react/api/');
+      const response = await axios.get('http://localhost/react/api/');
       // Gérer la réponse réussie
       console.log(response.data);// En supposant que data soit la clé dans la réponse
       setClients(response.data);
@@ -33,7 +33,7 @@ function ClientList() {
   };
   async function getSold () {  
     try {
-      const response = await axios.get('https://localhost/react/api/sold');
+      const response = await axios.get('http://localhost/react/api/sold');
       // Gérer la réponse réussie
       console.log(response.data);// En supposant que data soit la clé dans la réponse
       const sold = convertirEnTableau(response.data);

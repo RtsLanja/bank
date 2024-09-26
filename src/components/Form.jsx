@@ -26,7 +26,7 @@ function Form() {
 
   async function createAccount(data) {
     try {
-      axios.post('https://localhost/react/api/save', data)
+      axios.post('http://localhost/react/api/save', data)
       .then(response => {
         console.log('Requête POST réussie:', response.data);
         if(response.data == { status: 0, message: "Ce client existe déja." }){

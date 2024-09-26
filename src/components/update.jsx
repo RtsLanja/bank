@@ -16,7 +16,7 @@ function Update() {
         let isMounted = true;
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://localhost/react/api/' + id);
+                const response = await axios.get('http://localhost/react/api/' + id);
                 if (isMounted) {
                     setInputs(response.data);
                 }
@@ -43,7 +43,7 @@ function Update() {
 
     async function updateAccount(Data) {
         try {
-            const response = await axios.put('https://localhost/react/api/' + id + '/edit', Data);
+            const response = await axios.put('http://localhost/react/api/' + id + '/edit', Data);
             console.log(response.data);
             if(response.data == { status: 0, message: "Ce client existe déja." }){
                 alert("Ce client existe déja");
